@@ -9,7 +9,7 @@ function App() {
   const questions = useQuestionsStore(state => state.questions)
   return (
     <main>
-      <Container maxWidth='sm'>
+      <Container style={{ minHeight: '100vh' }}>
         <Stack
           direction='row'
           gap={2}
