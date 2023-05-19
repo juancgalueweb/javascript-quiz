@@ -9,8 +9,6 @@ import {
   Stack,
   Typography
 } from '@mui/material'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { gruvboxDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import { useQuestionsStore } from '../store/questions'
 import { type Question as QuestionType } from '../types.d'
 import Footer from './Footer'
@@ -42,13 +40,13 @@ const Question = ({ info }: { info: QuestionType }) => {
         m: 4,
         textAlign: 'left',
         p: 2,
-        backgroundColor: '#222'
+        backgroundColor: '#222',
+        maxWidth: '600px'
       }}
     >
-      <Typography variant='h5'>{info.question}</Typography>
-      <SyntaxHighlighter language='javascript' style={gruvboxDark}>
-        {info.code}
-      </SyntaxHighlighter>
+      <Typography variant='h5' marginBottom={4}>
+        {info.question}
+      </Typography>
       <List sx={{ backgroundColor: '#333' }} disablePadding>
         {info.answers.map((answer, index) => (
           <ListItem key={index} disablePadding divider>

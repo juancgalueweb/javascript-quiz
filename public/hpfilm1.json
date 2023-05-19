@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "question": "¿Cuál es el nombre completo de Harry Potter?",
+    "answers": [
+      "Harry Albus Potter",
+      "Harry James Potter",
+      "Harry Severus Potter",
+      "Harry Sirius Potter"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 2,
+    "question": "¿Qué deporte se juega en Hogwarts con escobas voladoras?",
+    "answers": [
+      "Bludger",
+      "Gobstones",
+      "Quidditch",
+      "Exploding Snap"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 3,
+    "question": "¿Cuál es el nombre del profesor de Pociones en Hogwarts?",
+    "answers": [
+      "Severus Snape",
+      "Remus Lupin",
+      "Albus Dumbledore",
+      "Rubeus Hagrid"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 4,
+    "question": "¿Qué criatura protege la Piedra Filosofal en Hogwarts?",
+    "answers": [
+      "El Basilisco",
+      "El Hipogrifo",
+      "El Dragón",
+      "El Cerbero"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 5,
+    "question": "¿Cuál es el nombre del primer libro de la serie de Harry Potter?",
+    "answers": [
+      "La Cámara Secreta",
+      "El Prisionero de Azkaban",
+      "El Cáliz de Fuego",
+      "La Piedra Filosofal"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 6,
+    "question": "¿Cómo se llama el profesor que enseña a volar a los alumnos de primer año?",
+    "answers": [
+      "Quirinus Quirrell",
+      "Alastor Moody",
+      "Rolanda Hooch",
+      "Filius Flitwick"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 7,
+    "question": "¿Cuál es la casa a la que pertenece Draco Malfoy?",
+    "answers": [
+      "Hufflepuff",
+      "Ravenclaw",
+      "Slytherin",
+      "Gryffindor"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 8,
+    "question": "¿Quién es el mejor amigo de Harry Potter?",
+    "answers": [
+      "Ron Weasley",
+      "Hermione Granger",
+      "Neville Longbottom",
+      "Draco Malfoy"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 9,
+    "question": "¿Quién es el director de Hogwarts?",
+    "answers": [
+      "Severus Snape",
+      "Remus Lupin",
+      "Albus Dumbledore",
+      "Rubeus Hagrid"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 10,
+    "question": "¿Cuál es el nombre del gigante amigo de Hagrid?",
+    "answers": [
+      "Grawp",
+      "Fang",
+      "Buckbeak",
+      "Dobby"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 11,
+    "question": "¿Cuál es el nombre completo del actor que interpreta a Harry Potter en las películas?",
+    "answers": [
+      "Rupert Grint",
+      "Emma Watson",
+      "Tom Felton",
+      "Daniel Radcliffe"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 12,
+    "question": "¿Cómo se llama la mascota de Neville Longbottom?",
+    "answers": [
+      "Scabbers",
+      "Crookshanks",
+      "Trevor",
+      "Hedwig"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 13,
+    "question": "¿Qué animal representa a la casa de Gryffindor en Hogwarts?",
+    "answers": [
+      "Águila",
+      "León",
+      "Serpiente",
+      "Tejón"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 14,
+    "question": "¿Cuál es el nombre completo de Hermione Granger?",
+    "answers": [
+      "Hermione Lily Granger",
+      "Hermione Rose Granger",
+      "Hermione Jean Granger",
+      "Hermione Elizabeth Granger"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 15,
+    "question": "¿Cómo se llama el guardián de las llaves y terrenos de Hogwarts?",
+    "answers": [
+      "Severus Snape",
+      "Rubeus Hagrid",
+      "Albus Dumbledore",
+      "Argus Filch"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 16,
+    "question": "¿Cuál es el nombre del juego que utiliza una bola dorada llamada Snitch?",
+    "answers": [
+      "Quaffle",
+      "Bludger",
+      "Golden Snitch",
+      "Beater's bat"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 17,
+    "question": "¿En qué año se estrenó la película 'Harry Potter y la Piedra Filosofal'?",
+    "answers": [
+      "2000",
+      "2001",
+      "2002",
+      "2003"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 18,
+    "question": "¿Cuál es el nombre del banco mágico ubicado en el Callejón Diagon?",
+    "answers": [
+      "Banco de Escocia",
+      "Banco de Londres",
+      "Banco de Inglaterra",
+      "Banco de Gringotts"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 19,
+    "question": "¿Cómo se llama la criatura mitad humana y mitad caballo que vive en el Bosque Prohibido?",
+    "answers": [
+      "Hipogrifo",
+      "El Basilisco",
+      "Centaur",
+      "El Trasgo"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 20,
+    "question": "¿Qué profesor de Hogwarts enseña la asignatura de Transformaciones?",
+    "answers": [
+      "Remus Lupin",
+      "Minerva McGonagall",
+      "Sybill Trelawney",
+      "Pomona Sprout"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 21,
+    "question": "¿Cuál es el nombre del fantasma que habita en la Torre de Gryffindor en Hogwarts?",
+    "answers": [
+      "Casi Decapitado",
+      "El Barón Sanguinario",
+      "Nick Casi Decapitado",
+      "El Fraile Gordo"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 22,
+    "question": "¿Cómo se llama el juego de ajedrez mágico que los estudiantes juegan en 'La Piedra Filosofal'?",
+    "answers": [
+      "Ajedrez Mágico del Castillo",
+      "Ajedrez Mágico de Hogwarts",
+      "Ajedrez de los Hechiceros",
+      "Ajedrez Encantado"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 23,
+    "question": "¿Cuál es el ingrediente principal de la poción Felix Felicis?",
+    "answers": [
+      "Lágrimas de Fénix",
+      "Escamas de Dragón",
+      "Ojo de Tentácula",
+      "Sangre de Unicornio"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 24,
+    "question": "¿Cómo se llama el lugar donde los magos compran sus varitas mágicas?",
+    "answers": [
+      "La Tienda de Varitas",
+      "Varitas Ollivander",
+      "Varitas Mágicas Ranas Saltarinas",
+      "Wand Emporium"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 25,
+    "question": "¿Cuál es la mascota de Ron Weasley?",
+    "answers": [
+      "Trevor",
+      "Scabbers",
+      "Crookshanks",
+      "Hedwig"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 26,
+    "question": "¿Cuál es el deporte favorito de Ron Weasley?",
+    "answers": [
+      "Quidditch",
+      "Gobstones",
+      "Wizard Chess",
+      "Exploding Snap"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 27,
+    "question": "¿Quién es el director de la casa Gryffindor en Hogwarts?",
+    "answers": [
+      "Severus Snape",
+      "Rubeus Hagrid",
+      "Albus Dumbledore",
+      "Minerva McGonagall"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 28,
+    "question": "¿Cuál es el nombre del primer hechizo que Harry Potter aprende en Hogwarts?",
+    "answers": [
+      "Expecto Patronum",
+      "Wingardium Leviosa",
+      "Expelliarmus",
+      "Accio"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 29,
+    "question": "¿Qué animal entrega la carta de aceptación a Hogwarts a Harry Potter?",
+    "answers": [
+      "Lechuza",
+      "Rata",
+      "Sapo",
+      "Gato"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 30,
+    "question": "¿Cuál es el apellido de la familia muggle con la que vive Harry antes de ir a Hogwarts?",
+    "answers": [
+      "Dursley",
+      "Granger",
+      "Malfoy",
+      "Weasley"
+    ],
+    "correctAnswer": 0
+  }
+]
