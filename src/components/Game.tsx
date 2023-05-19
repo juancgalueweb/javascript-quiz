@@ -9,9 +9,11 @@ import {
   Stack,
   Typography
 } from '@mui/material'
+import { useQuestionData } from '../hooks/useQuestionData'
 import { useQuestionsStore } from '../store/questions'
 import { type Question as QuestionType } from '../types.d'
 import Footer from './Footer'
+import QuizResultModal from './QuizResultModal'
 
 const getBackgroundColor = (info: QuestionType, index: number) => {
   const { userSelectedAnswer, correctAnswer } = info
@@ -41,7 +43,7 @@ const Question = ({ info }: { info: QuestionType }) => {
         textAlign: 'left',
         p: 2,
         backgroundColor: '#222',
-        maxWidth: '600px'
+        maxWidth: '100%'
       }}
     >
       <Typography variant='h5' marginBottom={4}>
@@ -69,9 +71,20 @@ const Game = () => {
   const currentQuestion = useQuestionsStore(state => state.currentQuestion)
   const questionInfo = questions[currentQuestion]
   const goNextQuestion = useQuestionsStore(state => state.goNextQuestion)
+  const { correct, unanswered } = useQuestionData()
+  const reset = useQuestionsStore(state => state.reset)
   const goPreviousQuestion = useQuestionsStore(
     state => state.goPreviousQuestion
   )
+  const open = useQuestionsStore(state => {
+    return (
+      state.currentQuestion === state.questions.length - 1 && unanswered === 0
+    )
+  })
+
+  const handleModalClose = () => {
+    reset()
+  }
 
   return (
     <>
@@ -98,6 +111,13 @@ const Game = () => {
       </Stack>
       <Question info={questionInfo} />
       <Footer />
+      {open && (
+        <QuizResultModal
+          handleClose={handleModalClose}
+          correct={correct}
+          open={open}
+        />
+      )}
     </>
   )
 }

@@ -89,7 +89,7 @@
   },
   {
     "id": 9,
-    "question": "¿Quién es el director de Hogwarts?",
+    "question": "¿Quién es el director de la Escuela Hogwarts de Magia y Hechicería?",
     "answers": [
       "Severus Snape",
       "Remus Lupin",
@@ -100,7 +100,7 @@
   },
   {
     "id": 10,
-    "question": "¿Cuál es el nombre del gigante amigo de Hagrid?",
+    "question": "¿Cuál es el nombre del amigo gigante de Hagrid?",
     "answers": [
       "Grawp",
       "Fang",
