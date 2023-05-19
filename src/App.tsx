@@ -16,11 +16,10 @@ function App() {
     <main>
       <Container
         style={{
-          minHeight: '100vh',
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'column',
-          gap: '40px'
+          gap: '20px'
         }}
         maxWidth='sm'
       >
@@ -33,7 +32,7 @@ function App() {
           <Typography
             variant={medium ? 'h2' : 'h5'}
             component='h1'
-            marginTop={4}
+            marginTop={2}
             sx={{ fontFamily: 'Harry Potter', color: '#FFC63D' }}
           >
             Harry Potter Quiz

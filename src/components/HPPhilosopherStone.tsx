@@ -3,6 +3,7 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
+import hpfilm1pic from '../assets/hpphilosopherstone.jpg'
 import { useQuestionsStore } from '../store/questions'
 
 const LIMIT_QUESTIONS = 10
@@ -19,7 +20,7 @@ export default function HPPhilosopherStone() {
         <CardMedia
           component='img'
           height='350'
-          image='/src/assets/hpphilosopherstone.jpg'
+          image={hpfilm1pic}
           alt='Harry Potter y la piedra filosofal imagen'
           onClick={handleClick}
         />

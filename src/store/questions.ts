@@ -13,6 +13,10 @@ interface State {
   reset: () => void
 }
 
+const API_URL = import.meta.env.PROD
+  ? 'https://javascript-quiz-juancgalueweb.vercel.app/'
+  : 'http://localhost:5173/'
+
 export const useQuestionsStore = create<State>()(
   persist(
     (set, get) => {
@@ -20,7 +24,7 @@ export const useQuestionsStore = create<State>()(
         questions: [],
         currentQuestion: 0,
         fetchQuestions: async (limit: number) => {
-          const res = await fetch('http://localhost:5173/hpfilm1.json')
+          const res = await fetch(`${API_URL}/hpfilm1.json`)
           const json = await res.json()
 
           const questions = json.sort(() => Math.random() - 0.5).slice(0, limit)
