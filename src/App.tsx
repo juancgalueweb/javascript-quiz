@@ -3,12 +3,15 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import './App.css'
 import Game from './components/Game'
 import HPPhilosopherStone from './components/HPPhilosopherStone'
+import QuizResultModal from './components/QuizResultModal'
+import { useQuestionData } from './hooks/useQuestionData'
 import { useQuestionsStore } from './store/questions'
 
 function App() {
   const questions = useQuestionsStore(state => state.questions)
   const theme = useTheme()
   const medium = useMediaQuery(theme.breakpoints.up('md'))
+  const { unanswered } = useQuestionData()
 
   return (
     <main>
@@ -37,7 +40,8 @@ function App() {
           </Typography>
         </Stack>
         {questions.length === 0 && <HPPhilosopherStone />}
-        {questions.length > 0 && <Game />}
+        {questions.length > 0 && unanswered > 0 && <Game />}
+        {questions.length > 0 && unanswered === 0 && <QuizResultModal />}
         <strong
           style={{ display: 'block', fontSize: '14px', marginTop: '48px' }}
         >
