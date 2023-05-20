@@ -2,6 +2,7 @@ import { Container, Stack, Typography, useTheme } from '@mui/material'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import './App.css'
 import Game from './components/Game'
+import HPChamberOfSecrets from './components/HPChamberOfSecrets'
 import HPPhilosopherStone from './components/HPPhilosopherStone'
 import QuizResultModal from './components/QuizResultModal'
 import { useQuestionData } from './hooks/useQuestionData'
@@ -20,7 +21,7 @@ function App() {
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'column',
-          gap: '20px'
+          gap: '10px'
         }}
         maxWidth='sm'
       >
@@ -31,7 +32,7 @@ function App() {
           justifyContent='center'
         >
           <Typography
-            variant={medium ? 'h2' : 'h5'}
+            variant={medium ? 'h2' : 'h4'}
             component='h1'
             marginTop={2}
             sx={{ fontFamily: 'Harry Potter', color: '#FFC63D' }}
@@ -39,7 +40,20 @@ function App() {
             Harry Potter Quiz
           </Typography>
         </Stack>
-        {questions.length === 0 && <HPPhilosopherStone />}
+        {questions.length === 0 && (
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '50px'
+            }}
+          >
+            <HPPhilosopherStone />
+            <HPChamberOfSecrets />
+          </div>
+        )}
         {questions.length > 0 && unanswered > 0 && <Game />}
         {questions.length > 0 && unanswered === 0 && <QuizResultModal />}
         <strong

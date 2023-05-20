@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "question": "¿Cómo se llama el animal que es considerado el guardián de la Cámara Secreta?",
+    "answers": [
+      "Un dragón",
+      "Un basilisco",
+      "Un hipogrifo",
+      "Una acromántula"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 2,
+    "question": "¿Cuál es el nombre del elfo doméstico que ayuda a Harry en Hogwarts?",
+    "answers": [
+      "Kreacher",
+      "Winky",
+      "Dobby",
+      "Hokey"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 3,
+    "question": "¿Quién es el profesor de Defensa Contra las Artes Oscuras en el segundo año de Harry?",
+    "answers": [
+      "Remus Lupin",
+      "Gilderoy Lockhart",
+      "Severus Snape",
+      "Alastor Moody"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 4,
+    "question": "¿Qué objeto revela la ubicación de la Cámara de los Secretos en Hogwarts?",
+    "answers": [
+      "El Mapa del Merodeador",
+      "La Poción Multijugos",
+      "El Diario de Tom Riddle",
+      "La Espada de Gryffindor"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 5,
+    "question": "¿Quién es el heredero de Slytherin en la película?",
+    "answers": [
+      "Draco Malfoy",
+      "Lucius Malfoy",
+      "Voldemort",
+      "Tom Riddle"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 6,
+    "question": "¿Cuál es el hechizo que abre puertas en la película?",
+    "answers": [
+      "Expelliarmus",
+      "Alohomora",
+      "Wingardium Leviosa",
+      "Avada Kedavra"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 7,
+    "question": "¿Cuál es la profesión de los padres de Hermione Granger?",
+    "answers": [
+      "Médicos",
+      "Aurors",
+      "Profesores de Hogwarts",
+      "Dentistas muggles"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 8,
+    "question": "¿Qué decía el papel que tenía Hermione en la mano cuando fue petrificada?",
+    "answers": [
+      "Agua",
+      "Pasillos",
+      "Tuberías",
+      "Espejos"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 9,
+    "question": "¿Por qué la Sra. Norris fue petrificada?",
+    "answers": [
+      "Porque se encontró con un espejo de doble sentido",
+      "Porque comió accidentalmente una poción de transformación",
+      "Porque fue atacada por un fantasma vengativo",
+      "Porque ella vio al Basilisco a través del agua del charco"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 10,
+    "question": "¿Por qué Hagrid le dijo a Harry y Ron que siguieran las arañas?",
+    "answers": [
+      "Porque Hagrid creía que las arañas los conducirían al escondite de Aragog, el líder de las arañas en el Bosque Prohibido",
+      "Porque Hagrid quería que encontraran un tesoro escondido en el Bosque Prohibido",
+      "Porque Hagrid pensó que las arañas los llevarían al Salón de los Trofeos",
+      "Porque Hagrid quería asustar a Harry y Ron como parte de una broma"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 11,
+    "question": "¿Por qué Harry no puedo llegar a la plataforma 9 3/4?",
+    "answers": [
+      "Porque perdió su boleto de tren y no podía demostrar que era estudiante de Hogwarts",
+      "Porque el andén de la plataforma estaba en construcción y no había acceso temporalmente",
+      "Porque Dobby conjuró un hechizo que bloqueó la entrada a la plataforma",
+      "Porque su lechuza, Hedwig, se escapó y no pudo enviar su mensaje de confirmación"
+    ],
+    "correctAnswer": 2
+  }
+]

@@ -6,7 +6,7 @@ import { type Question } from '../types.d'
 interface State {
   questions: Question[]
   currentQuestion: number
-  fetchQuestions: (limit: number) => Promise<void>
+  fetchQuestions: (limit: number, fileName: string) => Promise<void>
   selectAnswer: (questionId: number, answerIndex: number) => void
   goNextQuestion: () => void
   goPreviousQuestion: () => void
@@ -25,8 +25,8 @@ export const useQuestionsStore = create<State>()(
           loading: false,
           questions: [],
           currentQuestion: 0,
-          fetchQuestions: async (limit: number) => {
-            const res = await fetch(`${API_URL}/hpfilm1.json`)
+          fetchQuestions: async (limit: number, fileName: string) => {
+            const res = await fetch(`${API_URL}/${fileName}`)
             const json = await res.json()
 
             const questions = json
