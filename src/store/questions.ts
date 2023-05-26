@@ -48,7 +48,6 @@ export const useQuestionsStore = create<State>()(
             // averiguamos si el usuario ha seleccionado la respuesta correcta
             const isCorrectUserAnswer =
               questionInfo.correctAnswer === answerIndex
-            // Si es correcta, lanzamos el confetti
             if (isCorrectUserAnswer) {
               successToast()
             } else {
