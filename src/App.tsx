@@ -1,5 +1,6 @@
 import { Container, Stack, Typography, useTheme } from '@mui/material'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import { ToastContainer } from 'react-toastify'
 import './App.css'
 import Game from './components/Game'
 import HPChamberOfSecrets from './components/HPChamberOfSecrets'
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <main>
+      <ToastContainer />
       <Container
         style={{
           display: 'flex',

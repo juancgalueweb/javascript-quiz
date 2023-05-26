@@ -7,7 +7,7 @@ import {
   Stack,
   Typography
 } from '@mui/material'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { ToastContainer } from 'react-toastify'
 import { useQuestionsStore } from '../store/questions'
 import { type Question as QuestionType } from '../types.d'
@@ -38,20 +38,20 @@ const Question = ({ info }: { info: QuestionType }) => {
   const handleClick = (answerIndex: number) => () => {
     selectAnswer(info.id, answerIndex)
     setShowAnswerTime(false)
-    goNextQuestion()
+    setTimeout(() => {
+      goNextQuestion()
+      setShowAnswerTime(true)
+    }, 3000)
   }
 
   const handleTimeUp = () => {
     answerNotSelected(info.id)
-    goNextQuestion()
     setShowAnswerTime(false)
-  }
-
-  useEffect(() => {
     setTimeout(() => {
+      goNextQuestion()
       setShowAnswerTime(true)
-    })
-  }, [handleTimeUp])
+    }, 3000)
+  }
 
   return (
     <Card
