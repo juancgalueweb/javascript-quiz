@@ -1,7 +1,5 @@
-import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material'
 import {
   Card,
-  IconButton,
   List,
   ListItem,
   ListItemButton,
@@ -9,8 +7,11 @@ import {
   Stack,
   Typography
 } from '@mui/material'
+import { useEffect, useState } from 'react'
+import { ToastContainer } from 'react-toastify'
 import { useQuestionsStore } from '../store/questions'
 import { type Question as QuestionType } from '../types.d'
+import AnswerTimer from './AnswerTimer'
 import Footer from './Footer'
 
 const getBackgroundColor = (info: QuestionType, index: number) => {
@@ -29,10 +30,29 @@ const getBackgroundColor = (info: QuestionType, index: number) => {
 }
 
 const Question = ({ info }: { info: QuestionType }) => {
+  const [showAnswerTime, setShowAnswerTime] = useState(true)
   const selectAnswer = useQuestionsStore(state => state.selectAnswer)
+  const goNextQuestion = useQuestionsStore(state => state.goNextQuestion)
+  const answerNotSelected = useQuestionsStore(state => state.answerNotSelected)
+
   const handleClick = (answerIndex: number) => () => {
     selectAnswer(info.id, answerIndex)
+    setShowAnswerTime(false)
+    goNextQuestion()
   }
+
+  const handleTimeUp = () => {
+    answerNotSelected(info.id)
+    goNextQuestion()
+    setShowAnswerTime(false)
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowAnswerTime(true)
+    })
+  }, [handleTimeUp])
+
   return (
     <Card
       variant='outlined'
@@ -41,9 +61,11 @@ const Question = ({ info }: { info: QuestionType }) => {
         textAlign: 'left',
         p: 2,
         backgroundColor: '#222',
-        maxWidth: '100%'
+        maxWidth: '100%',
+        position: 'relative'
       }}
     >
+      {showAnswerTime && <AnswerTimer duration={20} onTimeUp={handleTimeUp} />}
       <Typography variant='h5' marginBottom={4}>
         {info.question}
       </Typography>
@@ -68,14 +90,10 @@ const Game = () => {
   const questions = useQuestionsStore(state => state.questions)
   const currentQuestion = useQuestionsStore(state => state.currentQuestion)
   const questionInfo = questions[currentQuestion]
-  const goNextQuestion = useQuestionsStore(state => state.goNextQuestion)
-
-  const goPreviousQuestion = useQuestionsStore(
-    state => state.goPreviousQuestion
-  )
 
   return (
     <>
+      <ToastContainer />
       <Stack
         direction='row'
         gap={2}
@@ -83,19 +101,8 @@ const Game = () => {
         justifyContent='center'
         marginTop={2}
       >
-        <IconButton
-          onClick={goPreviousQuestion}
-          disabled={currentQuestion === 0}
-        >
-          <ArrowBackIosNew />
-        </IconButton>
-        {currentQuestion + 1} / {questions.length}
-        <IconButton
-          onClick={goNextQuestion}
-          disabled={currentQuestion >= questions.length - 1}
-        >
-          <ArrowForwardIos />
-        </IconButton>
+        <span className='current-question'>{currentQuestion + 1}</span> /{' '}
+        {questions.length}
       </Stack>
       <Question info={questionInfo} />
       <Footer />

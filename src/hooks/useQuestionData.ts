@@ -7,7 +7,8 @@ export function useQuestionData() {
   let unanswered = 0
   questions.forEach(question => {
     const { userSelectedAnswer, correctAnswer } = question
-    if (userSelectedAnswer == null) unanswered++
+    if (userSelectedAnswer === -1) incorrect++
+    else if (userSelectedAnswer == null) unanswered++
     else if (userSelectedAnswer === correctAnswer) correct++
     else incorrect++
   })

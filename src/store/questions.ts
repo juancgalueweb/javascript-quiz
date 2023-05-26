@@ -1,6 +1,7 @@
-import confetti from 'canvas-confetti'
 import { create } from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
+import { errorToast } from '../helpers/ErrorToast'
+import { successToast } from '../helpers/SuccessToast'
 import { type Question } from '../types.d'
 
 interface State {
@@ -9,7 +10,7 @@ interface State {
   fetchQuestions: (limit: number, fileName: string) => Promise<void>
   selectAnswer: (questionId: number, answerIndex: number) => void
   goNextQuestion: () => void
-  goPreviousQuestion: () => void
+  answerNotSelected: (questionId: number) => void
   reset: () => void
 }
 
@@ -48,7 +49,11 @@ export const useQuestionsStore = create<State>()(
             const isCorrectUserAnswer =
               questionInfo.correctAnswer === answerIndex
             // Si es correcta, lanzamos el confetti
-            if (isCorrectUserAnswer) confetti()
+            if (isCorrectUserAnswer) {
+              successToast()
+            } else {
+              errorToast()
+            }
             // Cambiar esta información en la copia de la pregunta
             newQuestions[questionIndex] = {
               ...questionInfo,
@@ -58,22 +63,26 @@ export const useQuestionsStore = create<State>()(
             // Actualizamos el estado
             set({ questions: newQuestions }, false, 'SELECT_ANSWER')
           },
+          answerNotSelected: (questionId: number) => {
+            const { questions } = get()
+            const newQuestions: Question[] = structuredClone(questions)
+            const questionIndex = newQuestions.findIndex(
+              q => q.id === questionId
+            )
+            const questionInfo = newQuestions[questionIndex]
+            newQuestions[questionIndex] = {
+              ...questionInfo,
+              isCorrectUserAnswer: false,
+              userSelectedAnswer: -1
+            }
+            errorToast()
+            set({ questions: newQuestions }, false, 'ANSWER_NOT_SELECTED')
+          },
           goNextQuestion: () => {
             const { currentQuestion, questions } = get()
             const nextQuestion = currentQuestion + 1
             if (nextQuestion < questions.length) {
               set({ currentQuestion: nextQuestion }, false, 'GO_NEXT_QUESTION')
-            }
-          },
-          goPreviousQuestion: () => {
-            const { currentQuestion } = get()
-            const previousQuestion = currentQuestion - 1
-            if (previousQuestion >= 0) {
-              set(
-                { currentQuestion: previousQuestion },
-                false,
-                'GO_PREVIOUS_QUESTION'
-              )
             }
           },
           reset: () => {

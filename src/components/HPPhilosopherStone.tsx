@@ -16,14 +16,13 @@ export default function HPPhilosopherStone() {
     fetchQuestions(LIMIT_QUESTIONS, FILE_NAME)
   }
   return (
-    <Card sx={{ maxWidth: 450 }}>
+    <Card sx={{ maxWidth: 450 }} onClick={handleClick}>
       <CardActionArea>
         <CardMedia
           component='img'
           height='350'
           image={hpfilm1pic}
           alt='Harry Potter y la piedra filosofal imagen'
-          onClick={handleClick}
         />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div'>

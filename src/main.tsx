@@ -5,6 +5,7 @@ import '@fontsource/roboto/700.css'
 import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import ReactDOM from 'react-dom/client'
+import 'react-toastify/dist/ReactToastify.css'
 import App from './App.tsx'
 import './index.css'
 

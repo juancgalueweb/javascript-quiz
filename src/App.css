@@ -10,3 +10,24 @@
   padding: 2rem;
   text-align: center;
 }
+
+.answer-timer-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #333;
+}
+
+.progress {
+  height: 5px;
+  transition-duration: 0.1s;
+  width: 0;
+  transition-timing-function: linear;
+  background-color: red;
+}
+
+.current-question {
+  font-size: xx-large;
+  color: #ffc63d;
+}

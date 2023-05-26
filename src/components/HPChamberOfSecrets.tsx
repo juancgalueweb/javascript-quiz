@@ -16,14 +16,13 @@ export default function HPChamberOfSecrets() {
     fetchQuestions(LIMIT_QUESTIONS, FILE_NAME)
   }
   return (
-    <Card sx={{ maxWidth: 450 }}>
+    <Card sx={{ maxWidth: 450 }} onClick={handleClick}>
       <CardActionArea>
         <CardMedia
           component='img'
           height='350'
           image={hpfilm2pic}
           alt='Harry Potter y la Cámara de los Secretos pic'
-          onClick={handleClick}
         />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div'>
