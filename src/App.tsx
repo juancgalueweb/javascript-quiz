@@ -43,18 +43,23 @@ function App() {
           </Typography>
         </Stack>
         {questions.length === 0 && (
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '50px'
-            }}
-          >
-            <HPPhilosopherStone />
-            <HPChamberOfSecrets />
-          </div>
+          <>
+            <Typography variant='h5' component='h2' margin={2}>
+              Para jugar, haga click sobre la imagen de la película que desee.
+            </Typography>
+            <Container
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '50px'
+              }}
+            >
+              <HPPhilosopherStone />
+              <HPChamberOfSecrets />
+            </Container>
+          </>
         )}
         {questions.length > 0 && unanswered > 0 && <Game />}
         {questions.length > 0 && unanswered === 0 && <QuizResultModal />}
