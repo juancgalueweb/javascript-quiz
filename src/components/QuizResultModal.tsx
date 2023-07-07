@@ -36,7 +36,7 @@ const QuizResultModal = () => {
       '¡Excelente! 😎 Has respondido la mayoría de las preguntas correctamente.'
   } else if (correct >= 5) {
     message =
-      '¡Buen trabajo! 😊 Has respondido la mayoría de las preguntas correctamente.'
+      '¡Ahí más o menos! 🥺 Has respondido algunas preguntas correctamente.'
   } else if (correct >= 1) {
     message = 'Aún hay margen de mejora 😑. Sigue practicando.'
   } else {
